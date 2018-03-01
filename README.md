@@ -1,7 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# dynprog
+# dynprog - Domain-specific language for specifying dynamic programming computations
+
+[![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![Project Status: Active – The project has reached a stable, usable
+state and is being actively
+developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![lifecycle](http://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2018--03--01-orange.svg)](/commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.0.0.9000-orange.svg?style=flat-square)](commits/master)
 
 [![Travis build
 status](https://travis-ci.org/mailund/dynprog.svg?branch=master)](https://travis-ci.org/mailund/dynprog)
@@ -9,12 +17,21 @@ status](https://travis-ci.org/mailund/dynprog.svg?branch=master)](https://travis
 status](https://ci.appveyor.com/api/projects/status/github/mailund/dynprog?branch=master&svg=true)](https://ci.appveyor.com/project/mailund/dynprog)
 [![Coverage
 status](https://codecov.io/gh/mailund/dynprog/branch/master/graph/badge.svg)](https://codecov.io/github/mailund/dynprog?branch=master)
+[![Coverage
+status](http://coveralls.io/repos/github/mailund/dynprog/badge.svg?branch=master)](https://coveralls.io/github/mailund/dynprog?branch=master)
+
+[![CRAN
+status](http://www.r-pkg.org/badges/version/dynprog)](https://cran.r-project.org/package=dynprog)
+[![CRAN
+downloads](http://cranlogs.r-pkg.org/badges/grand-total/dynprog)](https://cran.r-project.org/package=dynprog)
+[![minimal R
+version](https://img.shields.io/badge/R-%E2%89%A53.1-blue.svg)](https://cran.r-project.org/)
 
 The goal of dynprog is to …
 
 ## Installation
 
-You can install the released version of dynprog from
+You can install the released version of `dynprog` from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
@@ -29,33 +46,3 @@ devtools::install_github("mailund/dynprog")
 ```
 
 ## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!

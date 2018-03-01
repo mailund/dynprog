@@ -1,11 +1,18 @@
 Package: dynprog
 Version: 0.0.0.9000
-Title: What the Package Does (One Line, Title Case)
-Description: What the package does (one paragraph).
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-License: What license is it under?
+Title: Dynamic Programming DSL
+Description: Implements a domain-specific langauge for specifying dynamic-programming
+    algorithms.
+Authors@R: person("Thomas", "Mailund", 
+                  email = "mailund@birc.au.dk", 
+                  role = c("aut", "cre"))
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
 Suggests: 
-    covr
+    covr,
+    testthat
+RoxygenNote: 6.0.1
+URL: https://github.com/mailund/dynprog
+BugReports: https://github.com/mailund/dynprog/issues
