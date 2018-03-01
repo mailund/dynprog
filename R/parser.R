@@ -1,27 +1,6 @@
 
 ## Parsing ranges #############################################################
 
-parse_range_assignments <- function(range_assignments, eval_env) {
-    n <- length(range_assignments)
-    result <- vector("list", length = n)
-    indices <- vector("character", length = n)
-
-    for (i in seq_along(range_assignments)) {
-        assignment <- range_assignments[[i]]
-
-        # FIXME: better input validation
-        stopifnot(assignment[[1]] == "<-")
-        range_var <- as.character(assignment[[2]])
-        range_value <- eval(assignment[[3]], eval_env)
-
-        indices[[i]] <- range_var
-        result[[i]] <- range_value
-    }
-
-    names(result) <- indices
-    result
-}
-
 #' Parser for the ranges part of a specification.
 #'
 #' FIXME: more
@@ -42,7 +21,24 @@ parse_ranges <- function(ranges) {
 
     # We want to evaluate all the expressions, in the quosure environment,
     # and put them in a list under the name we gave them.
-    parse_range_assignments(ranges_definitions, ranges_env)
+    n <- length(ranges_definitions)
+    result <- vector("list", length = n)
+    indices <- vector("character", length = n)
+
+    for (i in seq_along(ranges_definitions)) {
+        assignment <- ranges_definitions[[i]]
+
+        # FIXME: better input validation
+        stopifnot(assignment[[1]] == "<-")
+        range_var <- as.character(assignment[[2]])
+        range_value <- eval(assignment[[3]], ranges_env)
+
+        indices[[i]] <- range_var
+        result[[i]] <- range_value
+    }
+
+    names(result) <- indices
+    result
 }
 
 ## Parsing recursion ##########################################################

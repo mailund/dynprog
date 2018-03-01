@@ -18,9 +18,9 @@ test_that("we can run a top-level parser", {
     recursion <- rlang::expr(2)
     ranges <- rlang::expr(3)
     mock_obj <- list(
-      tbl_name = tbl_name,
-      recursion = recursion,
-      ranges = ranges
+        tbl_name = tbl_name,
+        recursion = recursion,
+        ranges = ranges
     )
 
     expect_true({
