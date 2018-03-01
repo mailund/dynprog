@@ -10,9 +10,12 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
+Imports: 
+    rlang (>= 0.1.2)
 Suggests: 
     covr,
     testthat
 RoxygenNote: 6.0.1
+Roxygen: list(markdown = TRUE)
 URL: https://github.com/mailund/dynprog
 BugReports: https://github.com/mailund/dynprog/issues
