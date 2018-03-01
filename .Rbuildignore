@@ -4,3 +4,5 @@
 ^\.travis\.yml$
 ^codecov\.yml$
 ^appveyor\.yml$
+^cleanup\.R$
+^experiments\.R$
