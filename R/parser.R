@@ -61,91 +61,51 @@ parse_recursion <- function(recursion) {
 
     n <- length(recursion_cases)
     patterns <- vector("list", length = n)
-    guards <- vector("list", length = n)
+    conditions <- vector("list", length = n)
     recursions <- vector("list", length = n)
 
     for (i in seq_along(recursion_cases)) {
         case <- recursion_cases[[i]]
 
-        guard <- TRUE
+        condition <- TRUE
         stopifnot(rlang::is_call(case)) # FIXME: better error handling
         if (case[[1]] == "?") {
             # NB: The order matters here!
-            guard <- case[[3]]
+            condition <- case[[3]]
             case <- case[[2]]
         }
 
-        stopifnot(case[[1]] == "<-")  # FIXME: better error handling
+        stopifnot(case[[1]] == "<-") # FIXME: better error handling
         pattern <- case[[2]]
         recursion <- case[[3]]
 
         patterns[[i]] <- pattern
         recursions[[i]] <- recursion
-        guards[[i]] <- guard
+        conditions[[i]] <- condition
     }
 
-    list(recursion_env = recursion_env,
-         patterns = patterns,
-         guards = guards,
-         recursions = recursions)
+    list(
+        recursion_env = recursion_env,
+        patterns = patterns,
+        conditions = conditions,
+        recursions = recursions
+    )
 }
 
 
 ## Main language interface: with and where ####################################
 
-#' Function for parsing an entire dynprog expression.
-#'
-#' This is the top-level parser. It will be invoked by \code{\link{\%where\%}}
-#' once an entire expression has been parsed by the R parser. It is then
-#' responsible for doing the DSL parsing before we evaluate the expression.
-#'
-#' @param spec The dynamic programming specification.
-#' @return     An object containing the parsed specification.
-parse <- function(spec) {
-    spec
-}
-
-#' Defines a table and connects it with a recursive formula.
-#'
-#' FIXME: more
-#'
-#' @param tbl_name  A name we can use for a table. This name is used
-#'                  in the `recursion` specification.
-#' @param recursion Specification of a recursion that uses `tbl_name`.
-#'
-#' @return An object representing the recursion-expression.
-#'         This object is used to create the dynamic programming algorithm
-#'         when the \code{\%with\%} expression is combined with a \code{\%where\%}
-#'         expression that specifies the indices the algorithm should iterate over.
-#'
-#' @seealso \%where\%
-#'
-#' @export
-`%with%` <- function(tbl_name, recursion) {
-    tbl_name <- rlang::enexpr(tbl_name)
-    recursion <- rlang::enquo(recursion)
-    # FIXME: check validity of input
-    list(tbl_name = tbl_name, recursion = recursion)
-}
-
 #' Connects a recursion with sequences it should recurse over.
 #'
 #' FIXME: more
 #'
-#' A \code{\%where\%} call is the last function call in a dynamic programming
-#' specification, so this is also where we trigger the actual evaluation of the
-#' expression.
-#'
 #' @param recursion  Specification of the dynamic programming recursion.
-#'                   This will be the result of a call to \code{\%with\%}.
 #' @param ranges     Specification of the index-ranges the recursion should
 #'                   compute values over.
-#'
-#' @seealso \%with\%
 #'
 #' @export
 `%where%` <- function(recursion, ranges) {
     # FIXME: check validity of input
-    recursion$ranges <- rlang::enquo(ranges)
-    recursion
+    list(recursions = parse_recursion(rlang::enquo(recursion)),
+         ranges = parse_ranges(rlang::enquo(ranges)))
 }

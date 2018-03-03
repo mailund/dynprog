@@ -7,20 +7,11 @@
 recursion \%where\% ranges
 }
 \arguments{
-\item{recursion}{Specification of the dynamic programming recursion.
-This will be the result of a call to \code{\%with\%}.}
+\item{recursion}{Specification of the dynamic programming recursion.}
 
 \item{ranges}{Specification of the index-ranges the recursion should
 compute values over.}
 }
 \description{
 FIXME: more
-}
-\details{
-A \code{\%where\%} call is the last function call in a dynamic programming
-specification, so this is also where we trigger the actual evaluation of the
-expression.
-}
-\seealso{
-\%with\%
 }
