@@ -60,8 +60,3 @@ test_that("we can parse recursion expressions", {
     expect_equal(parsed$recursions[[1]], rlang::expr(1))
     expect_equal(parsed$recursions[[2]], rlang::expr(n * fact[n - 1]))
 })
-
-
-test_that("we can run a top-level parser", {
-    skip("Not ready for this yet")
-})
