@@ -28,11 +28,10 @@ make_pattern_tests <- function(patterns, range_vars) {
     tests
 }
 make_condition_checks <- function(
-    ranges,
-    patterns,
-    conditions,
-    recursions
-) {
+                                  ranges,
+                                  patterns,
+                                  conditions,
+                                  recursions) {
     test_conditions <- make_pattern_tests(
         patterns,
         Map(as.symbol, names(ranges))
@@ -46,10 +45,9 @@ make_condition_checks <- function(
 }
 
 make_recursion_case <- function(
-    test_expr,
-    value_expr,
-    continue
-) {
+                                test_expr,
+                                value_expr,
+                                continue) {
     if (rlang::is_null(continue)) {
         rlang::call2("if", test_expr, value_expr)
     } else {
@@ -58,11 +56,10 @@ make_recursion_case <- function(
 }
 
 make_update_expr <- function(
-    ranges,
-    patterns,
-    conditions,
-    recursions
-) {
+                             ranges,
+                             patterns,
+                             conditions,
+                             recursions) {
     conditions <- make_condition_checks(
         ranges,
         patterns,
@@ -97,7 +94,7 @@ eval_recursion <- function(ranges, recursions) {
     for (row in seq_along(tbl)) {
         val <- eval(
             rlang::expr(rlang::UQ(update_expr)),
-            combs[row, , drop = FALSE],
+            combs[row, , drop = FALSE], # nolint
             eval_env
         )
         eval(rlang::expr(

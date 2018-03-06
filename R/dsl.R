@@ -14,5 +14,4 @@
         recursions = parse_recursion(rlang::enquo(recursion)),
         ranges = parse_ranges(rlang::enquo(ranges))
     )
-
 }
