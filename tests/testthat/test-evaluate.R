@@ -1,5 +1,3 @@
 context("test-evaluate.R")
 
-test_that("multiplication works", {
-    expect_equal(2 * 2, 4)
-})
+# the actual tests are done in test-dsl.R
