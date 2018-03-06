@@ -10,9 +10,9 @@
 #'
 #' @export
 `%where%` <- function(recursion, ranges) {
-    parsed <- list(
+    eval_recursion(
         recursions = parse_recursion(rlang::enquo(recursion)),
         ranges = parse_ranges(rlang::enquo(ranges))
     )
-    eval_dynprog(parsed)
+
 }
