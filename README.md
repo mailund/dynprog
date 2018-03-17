@@ -8,7 +8,7 @@
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![lifecycle](http://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2018--03--01-orange.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2018--03--17-orange.svg)](/commits/master)
 [![packageversion](https://img.shields.io/badge/Package%20version-0.0.0.9000-orange.svg?style=flat-square)](commits/master)
 
 [![Travis build
@@ -46,3 +46,29 @@ devtools::install_github("mailund/dynprog")
 ```
 
 ## Example
+
+``` r
+library(dynprog)
+
+x <- c("a", "b", "c")
+y <- c("a", "b", "b", "c")
+edit <- {
+  E[1,j] <- j - 1
+  E[i,1] <- i - 1
+  E[i,j] <- min(
+      E[i - 1,j] + 1,
+      E[i,j - 1] + 1,
+      E[i - 1,j - 1] + (x[i - 1] != y[j - 1])
+ ) ? i > 1 && j > 1
+} %where% {
+    i <- 1:(length(x) + 1)
+    j <- 1:(length(y) + 1)
+}
+
+edit
+#>      [,1] [,2] [,3] [,4] [,5]
+#> [1,]    0    1    2    3    4
+#> [2,]    1    0    1    2    3
+#> [3,]    2    1    0    1    2
+#> [4,]    3    2    1    1    1
+```
