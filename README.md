@@ -10,7 +10,6 @@ developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repo
 [![lifecycle](http://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Last-changedate](https://img.shields.io/badge/last%20change-2018--03--24-orange.svg)](/commits/master)
 [![packageversion](https://img.shields.io/badge/Package%20version-0.1.0-orange.svg?style=flat-square)](commits/master)
-
 [![Travis build
 status](https://travis-ci.org/mailund/dynprog.svg?branch=master)](https://travis-ci.org/mailund/dynprog)
 [![AppVeyor build
@@ -19,7 +18,6 @@ status](https://ci.appveyor.com/api/projects/status/github/mailund/dynprog?branc
 status](https://codecov.io/gh/mailund/dynprog/branch/master/graph/badge.svg)](https://codecov.io/github/mailund/dynprog?branch=master)
 [![Coverage
 status](http://coveralls.io/repos/github/mailund/dynprog/badge.svg?branch=master)](https://coveralls.io/github/mailund/dynprog?branch=master)
-
 [![CRAN
 status](http://www.r-pkg.org/badges/version/dynprog)](https://cran.r-project.org/package=dynprog)
 [![CRAN
