@@ -1,4 +1,4 @@
-# dynprog 0.0.0.9000
+# dynprog 0.1.0
 
-* Initial package setup.
+* Initial release.
 
