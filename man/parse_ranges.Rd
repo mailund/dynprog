@@ -12,6 +12,3 @@ parse_ranges(ranges)
 \value{
 A parsed specification for ranges.
 }
-\description{
-FIXME: more
-}
