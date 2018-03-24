@@ -9,7 +9,7 @@ state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![lifecycle](http://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Last-changedate](https://img.shields.io/badge/last%20change-2018--03--24-orange.svg)](/commits/master)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.0.9000-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.1.0-orange.svg?style=flat-square)](commits/master)
 
 [![Travis build
 status](https://travis-ci.org/mailund/dynprog.svg?branch=master)](https://travis-ci.org/mailund/dynprog)

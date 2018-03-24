@@ -7,7 +7,7 @@
 eval_recursion(ranges, recursions)
 }
 \arguments{
-\item{ranges}{The ranges specificatoin}
+\item{ranges}{The ranges specification}
 
 \item{recursions}{The recursions specification}
 }

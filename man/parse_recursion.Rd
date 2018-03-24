@@ -20,7 +20,7 @@ The parser return a list with the following components:
 \itemize{
 \item \strong{recursion_env:}  The environment in which expressions should be
 evaluated.
-\item \strong{partterns:} A list of patterns, one per recursion case.
+\item \strong{patterns:} A list of patterns, one per recursion case.
 \item \strong{conditions:} A list of conditions, one per recursion case.
 \item \strong{recursions:} A list of expressions, one per recursion case.
 }

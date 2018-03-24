@@ -52,7 +52,7 @@ parse_ranges <- function(ranges) {
 #' The parser return a list with the following components:
 #' - **recursion_env:**  The environment in which expressions should be
 #'     evaluated.
-#' - **partterns:** A list of patterns, one per recursion case.
+#' - **patterns:** A list of patterns, one per recursion case.
 #' - **conditions:** A list of conditions, one per recursion case.
 #' - **recursions:** A list of expressions, one per recursion case.
 #'
