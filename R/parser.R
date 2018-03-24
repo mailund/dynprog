@@ -3,7 +3,10 @@
 
 #' Parser for the ranges part of a specification.
 #'
-#' FIXME: more
+#' Parses the ranges, the bit after `%where%`, and return a list of index
+#' variables an the values they should iterate over. The ranges are returned as
+#' a list with the range variables as its names and the range values as the
+#' list components.
 #'
 #' @param ranges The quosure wrapping the input to the specification.
 #' @return A parsed specification for ranges.
@@ -44,7 +47,15 @@ parse_ranges <- function(ranges) {
 
 #' Parser for the recursion part of a specification.
 #'
-#' FIXME: more
+#' Parse the recursion part of an expressions, i.e. the bits before `%where%`.
+#'
+#' The parser return a list with the following components:
+#' - **recursion_env:**  The environment in which expressions should be
+#'     evaluated.
+#' - **partterns:** A list of patterns, one per recursion case.
+#' - **conditions:** A list of conditions, one per recursion case.
+#' - **recursions:** A list of expressions, one per recursion case.
+#'
 #'
 #' @param recursion The quosure wrapping the recursion of the specification.
 #' @return A parsed specification for recursions.
