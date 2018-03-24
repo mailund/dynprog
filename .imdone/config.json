@@ -2,7 +2,6 @@
   "exclude": [
     "^(node_modules|bower_components|\\.imdone|target|build|dist|logs|flow-typed|imdone-export.json)[\\/\\\\]?|\\.(git|svn|hg|npmignore)|\\~$|\\.(jpg|png|gif|swp|ttf|otf)$"
   ],
-  "languages": {".R":           {"name": "r", "symbol": "#"} },
   "watcher": true,
   "keepEmptyPriority": true,
   "code": {
@@ -18,10 +17,16 @@
       "XXX",
       "IDEA",
       "NOTE",
-      "REVIEW"
+      "REVIEW",
+      "MARK"
     ]
   },
-  "lists": [],
+  "lists": [
+    {
+      "name": "FIXME",
+      "hidden": false
+    }
+  ],
   "marked": {
     "gfm": true,
     "tables": true,
@@ -31,15 +36,14 @@
     "langPrefix": "language-"
   },
   "sync": {
-    "id": "5aacc1b6cae9560b1512528a",
-    "name": "mailund/pmatch",
+    "id": "5aae35e7660e430b0f339a99",
+    "name": "mailund/foolbox",
     "useImdoneioForPriority": true
   },
-  "meta": {
-    "gh": {
-      "urlTemplate": "https://github.com/mailund/pmatch/issues/%s",
-      "titleTemplate": "View github issue %s",
-      "icon": "icon-octoface"
+  "languages": {
+    ".R": {
+      "name": "r",
+      "symbol": "#"
     }
   }
 }
