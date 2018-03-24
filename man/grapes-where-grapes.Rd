@@ -12,6 +12,10 @@ recursion \%where\% ranges
 \item{ranges}{Specification of the index-ranges the recursion should
 compute values over.}
 }
+\value{
+A filled out dynamic programming table.
+}
 \description{
-FIXME: more
+This function parses a dynamic programming recursion expression and evaluates
+it, returning the table that the recursions specify.
 }

@@ -12,6 +12,9 @@ parse_recursion(recursion)
 \value{
 A parsed specification for recursions.
 }
+\description{
+Parse the recursion part of an expressions.
+}
 \details{
 The parser return a list with the following components:
 \itemize{

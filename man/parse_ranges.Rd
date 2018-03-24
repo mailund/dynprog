@@ -12,3 +12,9 @@ parse_ranges(ranges)
 \value{
 A parsed specification for ranges.
 }
+\description{
+Parses the ranges and return a list of index
+variables an the values they should iterate over. The ranges are returned as
+a list with the range variables as its names and the range values as the
+list components.
+}

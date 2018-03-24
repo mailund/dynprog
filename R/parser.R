@@ -3,7 +3,7 @@
 
 #' Parser for the ranges part of a specification.
 #'
-#' Parses the ranges, the bit after `%where%`, and return a list of index
+#' Parses the ranges and return a list of index
 #' variables an the values they should iterate over. The ranges are returned as
 #' a list with the range variables as its names and the range values as the
 #' list components.
@@ -47,7 +47,7 @@ parse_ranges <- function(ranges) {
 
 #' Parser for the recursion part of a specification.
 #'
-#' Parse the recursion part of an expressions, i.e. the bits before `%where%`.
+#' Parse the recursion part of an expressions.
 #'
 #' The parser return a list with the following components:
 #' - **recursion_env:**  The environment in which expressions should be

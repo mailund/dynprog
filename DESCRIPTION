@@ -1,7 +1,7 @@
 Package: dynprog
 Version: 0.0.0.9000
 Title: Dynamic Programming DSL
-Description: Implements a domain-specific langauge for specifying dynamic-programming
+Description: A domain-specific langauge for specifying dynamic-programming
     algorithms.
 Authors@R: person("Thomas", "Mailund", 
                   email = "mailund@birc.au.dk", 
