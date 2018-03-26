@@ -8,3 +8,4 @@
 ^experiments\.R$
 ^.imdone$
 ^cran-comments\.md$
+^docs$
