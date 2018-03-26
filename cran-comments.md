@@ -3,6 +3,15 @@
 Implements a small domain-specific language that translates recursions into
 dynamic programming computations.
 
+This is a resubmission with changes based on email. I have:
+
+    - Added examples so "checking examples" should not show NONE.
+        - %where% is the only exported function, so the examples are there
+    - I have added a reference to Dynamic Programming on Wikipedia
+      (it is a common algorithmic technique, so there is no obvious
+      paper to quote; the paper introducing it is dated compared to
+      modern algorithmic textbooks).
+
 ## Test environments
 * local OS X install, R 3.4.4
 * ubuntu 14.04 (on travis-ci), R 3.4.4
