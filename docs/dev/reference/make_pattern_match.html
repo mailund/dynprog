@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Evaluate an entire dynprog recursion. — eval_recursion • dynprog</title>
+<title>Translate a pattern into a predicate that checks the pattern. — make_pattern_match • dynprog</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -25,12 +25,13 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-<meta property="og:title" content="Evaluate an entire dynprog recursion. — eval_recursion" />
+<meta property="og:title" content="Translate a pattern into a predicate that checks the pattern. — make_pattern_match" />
 
-<meta property="og:description" content="This function takes the ranges and recursions of a specification and
-evaluate the dynprog expression, returning a filled out dynamic programming
-table." />
+<meta property="og:description" content="Takes a pattern from the DSL and make a comparison of the
+pattern specification against range variables." />
 <meta name="twitter:card" content="summary" />
+
+<meta name="robots" content="noindex">
 
 
 <!-- mathjax -->
@@ -57,7 +58,7 @@ table." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dynprog</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0</span>
+        <span class="label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development package">0.1.0.9000</span>
       </span>
     </div>
 
@@ -104,34 +105,33 @@ table." />
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Evaluate an entire dynprog recursion.</h1>
+    <h1>Translate a pattern into a predicate that checks the pattern.</h1>
     <small>Source: <a href='https://github.com/mailund/dynprog/blob/master/R/evaluate.R'><code>R/evaluate.R</code></a></small>
     </div>
 
     
-    <p>This function takes the <code>ranges</code> and <code>recursions</code> of a specification and
-evaluate the dynprog expression, returning a filled out dynamic programming
-table.</p>
+    <p>Takes a pattern from the DSL and make a comparison of the
+pattern specification against range variables.</p>
     
 
-    <pre class="usage"><span class='fu'>eval_recursion</span>(<span class='no'>ranges</span>, <span class='no'>recursions</span>)</pre>
+    <pre class="usage"><span class='fu'>make_pattern_match</span>(<span class='no'>pattern</span>, <span class='no'>range_vars</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>ranges</th>
-      <td><p>The ranges specification</p></td>
+      <th>pattern</th>
+      <td><p>An expression on the form <code>table[index-list]</code></p></td>
     </tr>
     <tr>
-      <th>recursions</th>
-      <td><p>The recursions specification</p></td>
+      <th>range_vars</th>
+      <td><p>A list of the variables used in the ranges.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The filled out dynamic programming table</p>
+    <p>An expression that tests <code>pattern</code> against <code>range_vars</code>.</p>
     
 
   </div>

@@ -21,14 +21,14 @@ library(dynprog)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![lifecycle](http://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-orange.svg)](/commits/master)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.1.0-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.1.0.9000-orange.svg?style=flat-square)](commits/master)
 [![Travis build status](https://travis-ci.org/mailund/dynprog.svg?branch=master)](https://travis-ci.org/mailund/dynprog)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/mailund/dynprog?branch=master&svg=true)](https://ci.appveyor.com/project/mailund/dynprog)
 [![Coverage status](https://codecov.io/gh/mailund/dynprog/branch/master/graph/badge.svg)](https://codecov.io/github/mailund/dynprog?branch=master)
 [![Coverage status](http://coveralls.io/repos/github/mailund/dynprog/badge.svg?branch=master)](https://coveralls.io/github/mailund/dynprog?branch=master)
 [![CRAN status](http://www.r-pkg.org/badges/version/dynprog)](https://cran.r-project.org/package=dynprog)
 [![CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/dynprog)](https://cran.r-project.org/package=dynprog)
-[![minimal R version](https://img.shields.io/badge/R-%E2%89%A53.1-blue.svg)](https://cran.r-project.org/)
+[![minimal R version](https://img.shields.io/badge/R-%E2%89%A53.2-blue.svg)](https://cran.r-project.org/)
 
 
 The `dynprog` package implements a small domain-specific language for specifying dynamic programming algorithms. It allows you to specify a computation as a recursion and it will then use this recursion to fill out a table and return it to you.

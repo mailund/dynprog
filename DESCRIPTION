@@ -1,5 +1,5 @@
 Package: dynprog
-Version: 0.1.0
+Version: 0.1.0.9000
 Title: Dynamic Programming Domain-Specific Language
 Description: A domain-specific language for specifying translating recursions
     into dynamic-programming algorithms. See 

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Evaluate an entire dynprog recursion. — eval_recursion • dynprog</title>
+<title>Function reference • dynprog</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -25,12 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-<meta property="og:title" content="Evaluate an entire dynprog recursion. — eval_recursion" />
+<meta property="og:title" content="Function reference" />
 
-<meta property="og:description" content="This function takes the ranges and recursions of a specification and
-evaluate the dynprog expression, returning a filled out dynamic programming
-table." />
-<meta name="twitter:card" content="summary" />
+<meta name="robots" content="noindex">
 
 
 <!-- mathjax -->
@@ -45,7 +42,7 @@ table." />
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container template-reference-index">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -57,7 +54,7 @@ table." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dynprog</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0</span>
+        <span class="label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development package">0.1.0.9000</span>
       </span>
     </div>
 
@@ -102,47 +99,97 @@ table." />
       </header>
 
       <div class="row">
-  <div class="col-md-9 contents">
+  <div class="col-md-9">
     <div class="page-header">
-    <h1>Evaluate an entire dynprog recursion.</h1>
-    <small>Source: <a href='https://github.com/mailund/dynprog/blob/master/R/evaluate.R'><code>R/evaluate.R</code></a></small>
+      <h1>Reference</h1>
     </div>
 
-    
-    <p>This function takes the <code>ranges</code> and <code>recursions</code> of a specification and
-evaluate the dynprog expression, returning a filled out dynamic programming
-table.</p>
-    
+    <div class="contents">
+      <table class="ref-index">
 
-    <pre class="usage"><span class='fu'>eval_recursion</span>(<span class='no'>ranges</span>, <span class='no'>recursions</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>ranges</th>
-      <td><p>The ranges specification</p></td>
-    </tr>
-    <tr>
-      <th>recursions</th>
-      <td><p>The recursions specification</p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+      <colgroup>
+        <col class="alias" />
+        <col class="title" />
+      </colgroup>
 
-    <p>The filled out dynamic programming table</p>
-    
-
+      <tbody>
+        <tr>
+          <th colspan="2">
+            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+            <p class="section-desc"></p>
+          </th>
+        </tr>
+        <tr>
+          <!--  -->
+          <td>
+            <p><code><a href="eval_recursion.html">eval_recursion()</a></code> </p>
+          </td>
+          <td><p>Evaluate an entire dynprog recursion.</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="get_table_name.html">get_table_name()</a></code> </p>
+          </td>
+          <td><p>Extract the table name from a pattern.</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="grapes-where-grapes.html">`%where%`()</a></code> </p>
+          </td>
+          <td><p>Connects a recursion with sequences it should recurse over.</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="make_condition_checks.html">make_condition_checks()</a></code> </p>
+          </td>
+          <td><p>Translate condition expressions into calls that test them.</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="make_pattern_match.html">make_pattern_match()</a></code> </p>
+          </td>
+          <td><p>Translate a pattern into a predicate that checks the pattern.</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="make_pattern_tests.html">make_pattern_tests()</a></code> </p>
+          </td>
+          <td><p>Make pattern tests for all patterns.</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="make_recursion_case.html">make_recursion_case()</a></code> </p>
+          </td>
+          <td><p>Construct a test for a case in the recursion</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="make_update_expr.html">make_update_expr()</a></code> </p>
+          </td>
+          <td><p>String together the case <code>if</code>-statements of a recursion.</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="parse_ranges.html">parse_ranges()</a></code> </p>
+          </td>
+          <td><p>Parser for the ranges part of a specification.</p></td>
+        </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="parse_recursion.html">parse_recursion()</a></code> </p>
+          </td>
+          <td><p>Parser for the recursion part of a specification.</p></td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
   </div>
+
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-          </ul>
-
+      <li><a href="#section-all-functions">All functions</a></li>
+    </ul>
   </div>
 </div>
 
