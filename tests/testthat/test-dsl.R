@@ -15,6 +15,30 @@ test_that("we can evaluate `fact`", {
     expect_equal(as.vector(fact), c(1, 2, 6, 24, 120, 720, 5040, 40320))
 })
 
+test_that("we can evaluate `Fibonnaci`", {
+ fib1 <- {
+     F[1] <- 1
+     F[2] <- 1
+     F[n] <- F[n - 1] + F[n - 2]
+ }   %where% {
+     n <- 1:10
+ }
+ fib2 <- {
+     F[n] <- F[n-1] + F[n-2] ? n > 2
+     F[n] <- 1
+ } %where% {
+   n <- 1:10
+ }
+ fib3 <- {
+     F[n] <- 1 ? n <= 2
+     F[n] <- F[n-1] + F[n-2]
+ } %where% {
+     n <- 1:10
+ }
+
+ expect_equal(fib1, fib2)
+ expect_equal(fib1, fib3)
+})
 
 test_that("we can evaluate `edit`", {
 

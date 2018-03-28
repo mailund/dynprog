@@ -61,7 +61,7 @@ make_pattern_tests <- function(patterns, range_vars) {
 #' @param patterns The patterns specifications
 #' @param conditions The conditions specifications
 #' @param recursions The recursions specification
-#' @return A list of calls, one per recurision, for testing conditions.
+#' @return A list of calls, one per recursion, for testing conditions.
 make_condition_checks <- function(ranges,
                                   patterns,
                                   conditions,
@@ -129,7 +129,7 @@ make_update_expr <- function(ranges,
 #' evaluate the dynprog expression, returning a filled out dynamic programming
 #' table.
 #'
-#' @param ranges The ranges specificatoin
+#' @param ranges The ranges specification
 #' @param recursions The recursions specification
 #' @return The filled out dynamic programming table
 eval_recursion <- function(ranges, recursions) {

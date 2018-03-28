@@ -16,7 +16,7 @@ make_condition_checks(ranges, patterns, conditions, recursions)
 \item{recursions}{The recursions specification}
 }
 \value{
-A list of calls, one per recurision, for testing conditions.
+A list of calls, one per recursion, for testing conditions.
 }
 \description{
 Takes the full dynprog expression and construct a list of condition
