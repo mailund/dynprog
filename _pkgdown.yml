@@ -3,14 +3,10 @@ template:
         bootswatch: cosmo
 
 navbar:
-  title: "foolbox"
+  title: "dynprog"
   left:
     - icon: fa-home
       href: index.html
-    - text: "Manuals"
-      href: articles/index.html
-    - text: "Functions"
-      href: reference/index.html
     - text: "Changelog"
       href: news/index.html
   right:
