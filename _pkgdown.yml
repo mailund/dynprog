@@ -2,22 +2,16 @@ template:
     params:
         bootswatch: cosmo
 
-development:
-  mode: auto
-  destination: dev
-
 navbar:
-  title: "dynprog"
+  title: "foolbox"
   left:
-    - text: Development
-      href: https://mailund.github.io/dynprog/dev/index.html
-    - text: Released
-      href: https://mailund.github.io/dynprog/index.html
+    - icon: fa-home
+      href: index.html
     - text: "Manuals"
       href: articles/index.html
     - text: "Functions"
       href: reference/index.html
-    - text: "News"
+    - text: "Changelog"
       href: news/index.html
   right:
    - icon: fa-twitter
