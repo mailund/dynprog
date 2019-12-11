@@ -1,5 +1,5 @@
 Package: dynprog
-Version: 0.1.0.9000
+Version: 0.1.1
 Title: Dynamic Programming Domain-Specific Language
 Description: A domain-specific language for specifying translating recursions
     into dynamic-programming algorithms. See 
@@ -17,7 +17,7 @@ Imports:
 Suggests: 
     covr,
     testthat
-RoxygenNote: 6.0.1
+RoxygenNote: 7.0.2
 Roxygen: list(markdown = TRUE)
 URL: https://github.com/mailund/dynprog
 BugReports: https://github.com/mailund/dynprog/issues

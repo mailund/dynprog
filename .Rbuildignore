@@ -9,3 +9,5 @@
 ^.imdone$
 ^cran-comments\.md$
 ^docs$
+^_pkgdown.yml$
+^CRAN-RELEASE$

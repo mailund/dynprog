@@ -3,6 +3,26 @@
 Implements a small domain-specific language that translates recursions into
 dynamic programming computations.
 
+## Version 0.1.1
+
+Resubmit: Fixed some broken URLs.
+
+You can no longer assign lists to `dim()` so I flattened the result of a `Map()` to a vector.
+
+## Test environments
+* local OS X install, R 3.6.1
+* win-builder
+* Rhub:
+    -	Windows Server 2008 R2 SP1, R-devel, 32/64 bit
+    - Ubuntu Linux 16.04 LTS, R-release, GCC
+    - Fedora Linux, R-devel, clang, gfortran
+  
+
+Some of the tests trigger a "NOTE Maintainere" but otherwise passes all tests.
+
+
+## Version 0.1.0
+
 This is a resubmission with changes based on email. I have:
 
     - Added examples so "checking examples" should not show NONE.

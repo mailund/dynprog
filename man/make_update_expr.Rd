@@ -16,7 +16,7 @@ make_update_expr(ranges, patterns, conditions, recursions)
 \item{recursions}{The recursions specification}
 }
 \value{
-A series of \code{if}-\code{else}-statements for evaluating a recursion.
+A series of \code{if}-\verb{else}-statements for evaluating a recursion.
 }
 \description{
 String together the case \code{if}-statements of a recursion.

@@ -145,7 +145,7 @@ eval_recursion <- function(ranges, recursions) {
 
     combs <- do.call(expand.grid, ranges)
     tbl <- vector("numeric", length = nrow(combs))
-    dim(tbl) <- Map(length, ranges)
+    dim(tbl) <- unlist(Map(length, ranges))
     eval_env[[tbl_name_string]] <- tbl
 
     for (row in seq_along(tbl)) {
